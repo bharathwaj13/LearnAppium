@@ -16,6 +16,8 @@ public class AndroidScriptUsingAppPackageAndAppActivity_Flipkart {
         dc.setCapability("appPackage","com.flipkart.android");
         //dc.setCapability("appActivity","com.flipkart.android.activity.HomeFragmentHolderActivity");
         dc.setCapability("appActivity","com.flipkart.android.SplashActivity");
+        //noReset-true will open the app without clearing the cache
+        dc.setCapability("noReset",true);
         dc.setCapability("deviceName","Bharath Phone");
         AppiumDriver driver =new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"),dc);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
